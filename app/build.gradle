@@ -34,10 +34,11 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.3.0'
-    compile 'com.firebase:firebase-client-android:2.4.1+'
+    compile 'com.firebase:firebase-client-android:2.5.2+'
     compile 'com.firebaseui:firebase-ui:0.2.0'
     compile 'com.yalantis:sidemenu:1.0'
     compile 'com.google.android.gms:play-services-appindexing:8.1.0'
     compile 'com.google.apis:google-api-services-youtube:v3-rev171-1.22.0'
+    compile 'com.paypal.sdk:paypal-android-sdk:2.14.2'
 
 }
