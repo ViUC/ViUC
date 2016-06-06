@@ -10,8 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.synapsehub.viuc.R;
-import com.synapsehub.viuc.model.User;
-import com.synapsehub.viuc.utils.Config;
+import com.synapsehub.viuc.model.Contributor;
 import com.firebase.client.Firebase;
 import com.firebase.ui.FirebaseListAdapter;
 
@@ -21,7 +20,7 @@ import com.firebase.ui.FirebaseListAdapter;
 public class ListUserFragment extends ListFragment{
 
     private Firebase mFireBaseRef; // Firebase reference
-    FirebaseListAdapter<User> mListAdapter;
+    FirebaseListAdapter<Contributor> mListAdapter;
 
     public ListUserFragment(){}
 
@@ -58,7 +57,7 @@ public class ListUserFragment extends ListFragment{
                 values.put("text",text);
                 */
 
-                User theuser = new User(username, pasword,phoneu,secreth);
+                Contributor theuser = new Contributor(username, pasword,phoneu,secreth);
                 mFireBaseRef.push().setValue(theuser);
                 textUsern.setText((""));
                 textPswd.setText((""));
@@ -67,13 +66,12 @@ public class ListUserFragment extends ListFragment{
             }
         });
 
-        mListAdapter = new FirebaseListAdapter<User>(getActivity(), User.class, android.R.layout.two_line_list_item, mFireBaseRef) {
+        mListAdapter = new FirebaseListAdapter<Contributor>(getActivity(), Contributor.class, android.R.layout.two_line_list_item, mFireBaseRef) {
             @Override
-            protected void populateView(View v, User model) {
+            protected void populateView(View v, Contributor model) {
                 ((TextView) v.findViewById(android.R.id.text1)).setText(model.getUserName());
-                ((TextView) v.findViewById(android.R.id.text2)).setText(model.getPassword());
-                ((TextView) v.findViewById(android.R.id.text1)).setText(model.getPhoneNumber());
-                ((TextView) v.findViewById(android.R.id.text2)).setText(model.getSecretHint());
+                ((TextView) v.findViewById(android.R.id.text2)).setText(model.getPhoneNumber());
+
             }
         };
         setListAdapter(mListAdapter);

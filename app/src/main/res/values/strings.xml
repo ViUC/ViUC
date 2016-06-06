@@ -50,6 +50,20 @@
     <string name="desc_list_item_icon">Item Icon</string>
 
 
+    <!-- Strings related to preference -->
+    <!-- All these will be changer when i'll be ready with news values -->
+    <string name="pref_agenda_key" translatable="false">agenda</string>
+    <string name="pref_agenda_label">Synchroniser avec Google Agenda</string>
+    <string name="pref_agenda_true">Les sessions que vous avez sélectionnées seront automatiquement synchronisées avec votre Google Agenda.</string>
+    <string name="pref_agenda_default" translatable="false">false</string>
+    <string name="pref_notif_key" translatable="false">notification</string>
+    <string name="pref_notif_label">Prévenez-moi lorsque mes sessions sont sur le point de commencer</string>
+    <string name="pref_notif_true">L\'application affichera une notification lorsque les sessions que vous avez sélectionnées sont sur le point de commencer.</string>
+    <string name="pref_notif_default" translatable="false">false</string>
+    <string name="pref_note_key" translatable="false">note</string>
+    <string name="pref_note_label">Rappelez-moi d\'évaluer mes sessions</string>
+    <string name="pref_note_true">L\'application affichera des notifications demandant votre avis sur les sessions que vous avez sélectionnées.</string>
+    <string name="pref_note_default" translatable="false">true</string>
 
 </resources>
 

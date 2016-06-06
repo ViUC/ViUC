@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/myPrimaryDarkColor"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--
+        <ImageView
+            android:layout_above="@+id/llBannerBottom"
+            android:layout_width="140dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/devfest"/> -->
+    <TextView
+        android:layout_above="@+id/llBannerBottom"
+        android:text="Virtual University on the Cloud"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/llBannerBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingTop="30dp"
+        android:background="@drawable/border_login">
+        <TextView
+            android:gravity="center_horizontal"
+            android:textSize="25sp"
+            android:textStyle="italic"
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginBottom="30dp"
+            android:text="S'identifier" />
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+            <EditText
+                android:id="@+id/confirmation_code"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:hint="Code de confirmation"
+                android:layout_marginRight="5dp"
+                android:singleLine="true"
+                style="@style/EditTextStyle"/>
+            <Button
+                android:id="@+id/btn_scan"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_weight="0.2"
+                style="@style/btn_style_min"
+                android:layout_marginLeft="5dp"
+                android:onClick="scan"
+                android:text="Scan"/>
+        </LinearLayout>
+
+
+
+        <Button
+            android:id="@+id/btn_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_style"
+            android:onClick="login"
+            android:text="Se connecter"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="30.0dip"
+            android:layout_marginBottom="20dp">
+            <TextView
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:text="Non inscrit?" />
+
+            <TextView
+                android:textSize="18sp"
+                android:id="@+id/register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:textColor="@color/myPrimaryColor"
+                android:text="S'inscrire."
+                android:onClick="register"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
